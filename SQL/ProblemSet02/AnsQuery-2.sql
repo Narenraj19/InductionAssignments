@@ -40,7 +40,7 @@
 
 /* 6.  Write a valid SQL statement that displays the plant name and  the total amount of seed required for each plant that were plant in the garden. The output should be in descending order of plant name. */ 
 
-  select p.name, pt.seeds from plant p inner join planted p1 on p.plantid=p1.plantfk order by p.name desc; 
+  select p.name, p1.seeds from plant p inner join planted p1 on p.plantid=p1.plantfk order by p.name desc; 
  
 /*Record Count: 6;*/
 
@@ -77,7 +77,7 @@
 /*Record Count: 2;*/
 
  
-/* 10. Create a view that lists all the plant names picked from all locations except ’West’ in the month of August.  */
+/* 10. Create a view that lists all the plant names picked from all locations except â€™Westâ€™ in the month of August.  */
  
  select name from plant where plantid in 
  (select plantfk from picked where extract(month from date1)=8 
