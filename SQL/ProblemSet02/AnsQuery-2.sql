@@ -45,7 +45,7 @@
 /*Record Count: 6;*/
 
  
-/* 7. Write a valid SQL statement that calculates the average number of items produced per seed planted for each plant type:( (Average number of items = total amount picked / total seeds planted.)  8/
+/* 7. Write a valid SQL statement that calculates the average number of items produced per seed planted for each plant type:( (Average number of items = total amount picked / total seeds planted.)  */
  
  select p.name,(pc.amount/p1.seeds)as "AvgItems"  
  from plant p inner join planted p1 on p.plantid=p1.plantfk  
